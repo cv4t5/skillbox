@@ -9,7 +9,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sortAndPrintArray(array: arrayOfNumbers)
+        sortAnyArray(array: arrayOfNumbers, sortAlghoritm: { (a: Int, b: Int) in a > b })
         print(convertArrayNumbersToArrayString(array: arrayOfNumbers))
         print(convertStringArrayToSingleString(array: arrayOfNames))
         executeSomeFunc(someFunc: { print("hello") })
@@ -18,9 +18,9 @@ class ViewController: UIViewController {
         x()
     }
 
-    func sortAndPrintArray(array: [Any]) {
+    func sortAnyArray(array: [Any], sortAlghoritm: @escaping (Int, Int) -> Bool) {
         if let array = array as? [Int] {
-            let sortedArray = array.sorted(by: >)
+            let sortedArray = array.sorted(by: sortAlghoritm)
             print(sortedArray)
         }
     }
