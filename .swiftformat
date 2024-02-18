@@ -1,0 +1,60 @@
+--swiftversion 5.9
+--exclude Pods, build/
+
+--allman false
+--binarygrouping 4,8
+--commas always
+--decimalgrouping 3,6
+--voidtype void
+--exponentcase lowercase
+--exponentgrouping disabled
+--fractiongrouping disabled
+--header ignore
+--hexgrouping 4,8
+--hexliteralcase uppercase
+--ifdef indent
+--indent 4
+--indentcase false
+--importgrouping testable-bottom
+--linebreaks lf
+--maxwidth none
+--octalgrouping 4,8
+--elseposition same-line
+--funcattributes prev-line
+--typeattributes prev-line
+--wraparguments before-first
+--wrapcollections before-first
+--operatorfunc spaced
+--patternlet hoist
+--ranges spaced
+--self remove
+--semicolons inline
+--trimwhitespace always
+--wrapenumcases always
+--extensionacl on-declarations
+--marktypes never
+--markextensions always
+--extensionmark "MARK: - %t + %c"
+--groupedextension "MARK: %c"
+
+--enable wrapSwitchCases
+--enable sortSwitchCases
+--enable isEmpty
+--enable markTypes
+--enable organizeDeclarations
+
+# Configure other formatting options as per your project's style guide
+--disable braces
+--disable strongOutlets
+--disable strongOutlets
+--disable redundantInit
+--disable unusedArguments
+--disable hoistPatternLet
+--disable redundantOptionalBinding
+--disable redundantStaticSelf
+--disable trailingCommas
+--disable unusedArguments
+--disable wrapMultilineStatementBraces
+--disable redundanttype
+--disable andOperator
+--disable preferForLoop
