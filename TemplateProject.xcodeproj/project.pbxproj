@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		BC6690563ABA48695264097E /* Pods_TemplateProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CB6F44C557ADB15E81403E /* Pods_TemplateProject.framework */; };
+		F079D2292B82C552004F8187 /* LogoVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = F079D2282B82C552004F8187 /* LogoVIew.xib */; };
+		F079D22C2B82C812004F8187 /* LogoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D22B2B82C812004F8187 /* LogoVIew.swift */; };
+		F079D2382B82E26B004F8187 /* GraphicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D2372B82E26B004F8187 /* GraphicsController.swift */; };
+		F079D23C2B83EDE3004F8187 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D23B2B83EDE3004F8187 /* DataTableViewCell.swift */; };
+		F079D23E2B83EEB6004F8187 /* Vitrati.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D23D2B83EEB6004F8187 /* Vitrati.swift */; };
+		F079D2402B83EEC5004F8187 /* Dohodi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D23F2B83EEC5004F8187 /* Dohodi.swift */; };
+		F079D2422B83F001004F8187 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D2412B83F001004F8187 /* Category.swift */; };
 		F097C83C2B73F67B00AEDE0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F097C83B2B73F67B00AEDE0D /* AppDelegate.swift */; };
 		F097C83E2B73F67B00AEDE0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F097C83D2B73F67B00AEDE0D /* SceneDelegate.swift */; };
-		F097C8402B73F67B00AEDE0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F097C83F2B73F67B00AEDE0D /* ViewController.swift */; };
+		F097C8402B73F67B00AEDE0D /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F097C83F2B73F67B00AEDE0D /* MainController.swift */; };
 		F097C8432B73F67B00AEDE0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F097C8412B73F67B00AEDE0D /* Main.storyboard */; };
 		F097C8452B73F67C00AEDE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F097C8442B73F67C00AEDE0D /* Assets.xcassets */; };
 		F097C8482B73F67C00AEDE0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F097C8462B73F67C00AEDE0D /* LaunchScreen.storyboard */; };
@@ -20,10 +27,17 @@
 		83440777313AC2CF43535F9C /* Pods-TemplateProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.debug.xcconfig"; path = "Target Support Files/Pods-TemplateProject/Pods-TemplateProject.debug.xcconfig"; sourceTree = "<group>"; };
 		915A30B09AD95177BDB60DC8 /* Pods-TemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.release.xcconfig"; path = "Target Support Files/Pods-TemplateProject/Pods-TemplateProject.release.xcconfig"; sourceTree = "<group>"; };
 		C4CB6F44C557ADB15E81403E /* Pods_TemplateProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F079D2282B82C552004F8187 /* LogoVIew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoVIew.xib; sourceTree = "<group>"; };
+		F079D22B2B82C812004F8187 /* LogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVIew.swift; sourceTree = "<group>"; };
+		F079D2372B82E26B004F8187 /* GraphicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsController.swift; sourceTree = "<group>"; };
+		F079D23B2B83EDE3004F8187 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		F079D23D2B83EEB6004F8187 /* Vitrati.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitrati.swift; sourceTree = "<group>"; };
+		F079D23F2B83EEC5004F8187 /* Dohodi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dohodi.swift; sourceTree = "<group>"; };
+		F079D2412B83F001004F8187 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F097C8382B73F67B00AEDE0D /* TemplateProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemplateProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F097C83B2B73F67B00AEDE0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F097C83D2B73F67B00AEDE0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F097C83F2B73F67B00AEDE0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F097C83F2B73F67B00AEDE0D /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		F097C8422B73F67B00AEDE0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F097C8442B73F67C00AEDE0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F097C8472B73F67C00AEDE0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +62,6 @@
 				83440777313AC2CF43535F9C /* Pods-TemplateProject.debug.xcconfig */,
 				915A30B09AD95177BDB60DC8 /* Pods-TemplateProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -74,6 +87,7 @@
 			children = (
 				F097C8462B73F67C00AEDE0D /* LaunchScreen.storyboard */,
 				F097C8412B73F67B00AEDE0D /* Main.storyboard */,
+				F079D2282B82C552004F8187 /* LogoVIew.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -81,9 +95,22 @@
 		F079D2272B82B73D004F8187 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F097C83F2B73F67B00AEDE0D /* ViewController.swift */,
+				F097C83F2B73F67B00AEDE0D /* MainController.swift */,
+				F079D2372B82E26B004F8187 /* GraphicsController.swift */,
+				F079D23B2B83EDE3004F8187 /* DataTableViewCell.swift */,
+				F079D23D2B83EEB6004F8187 /* Vitrati.swift */,
+				F079D23F2B83EEC5004F8187 /* Dohodi.swift */,
+				F079D2412B83F001004F8187 /* Category.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F079D22A2B82C65E004F8187 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				F079D22B2B82C812004F8187 /* LogoVIew.swift */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		F097C82F2B73F67B00AEDE0D = {
@@ -107,6 +134,7 @@
 		F097C83A2B73F67B00AEDE0D /* TemplateProject */ = {
 			isa = PBXGroup;
 			children = (
+				F079D22A2B82C65E004F8187 /* Xib */,
 				F079D2272B82B73D004F8187 /* Controllers */,
 				F079D2262B82B729004F8187 /* Screens */,
 				F079D2252B82B713004F8187 /* Delegates */,
@@ -180,6 +208,7 @@
 			files = (
 				F097C8482B73F67C00AEDE0D /* LaunchScreen.storyboard in Resources */,
 				F097C8452B73F67C00AEDE0D /* Assets.xcassets in Resources */,
+				F079D2292B82C552004F8187 /* LogoVIew.xib in Resources */,
 				F097C8432B73F67B00AEDE0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,9 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F097C8402B73F67B00AEDE0D /* ViewController.swift in Sources */,
+				F097C8402B73F67B00AEDE0D /* MainController.swift in Sources */,
+				F079D23C2B83EDE3004F8187 /* DataTableViewCell.swift in Sources */,
+				F079D2382B82E26B004F8187 /* GraphicsController.swift in Sources */,
+				F079D22C2B82C812004F8187 /* LogoVIew.swift in Sources */,
 				F097C83C2B73F67B00AEDE0D /* AppDelegate.swift in Sources */,
+				F079D2422B83F001004F8187 /* Category.swift in Sources */,
 				F097C83E2B73F67B00AEDE0D /* SceneDelegate.swift in Sources */,
+				F079D2402B83EEC5004F8187 /* Dohodi.swift in Sources */,
+				F079D23E2B83EEB6004F8187 /* Vitrati.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

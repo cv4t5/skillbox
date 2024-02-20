@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LogoVIew" customModule="TemplateProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fin_image" translatesAutoresizingMaskIntoConstraints="NO" id="CxO-cn-BeZ">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CxO-cn-BeZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hde-qw-hgD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CxO-cn-BeZ" secondAttribute="trailing" id="IEy-pD-sOM"/>
+                <constraint firstItem="CxO-cn-BeZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JLW-f4-Osv"/>
+                <constraint firstAttribute="bottom" secondItem="CxO-cn-BeZ" secondAttribute="bottom" id="iHQ-f5-jkn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="129.00763358778624" y="-204.22535211267606"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fin_image" width="380" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
