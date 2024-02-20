@@ -129,16 +129,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "operationCell") as? DataTableViewCell else { return UITableViewCell() }
 
-        if segmentStatement.selectedSegmentIndex == 1 {
-            cell.labelKindOfCost.text = costs[indexPath.row].name
-            cell.labelKindOfCost.isHidden = false
-        } else {
-            cell.labelKindOfCost.isHidden = true
-        }
+        let index = indexPath.row
+        let cellModel = DataTableViewCellModel(kindOfCost: segmentStatement.selectedSegmentIndex == 0 ? "" : costs[index].name, cost: segmentStatement.selectedSegmentIndex == 0 ? incomes[index].amount : costs[index].amount, Date: service.getStringDateTimeNow(date: Date()))
 
-        cell.labelCost.text = segmentStatement.selectedSegmentIndex == 0 ? "\(incomes[indexPath.row].amount)" : "\(costs[indexPath.row].amount)"
-        var dateStr = segmentStatement.selectedSegmentIndex == 0 ? service.getStringDateTimeNow(date: incomes[indexPath.row].date) : service.getStringDateTimeNow(date: costs[indexPath.row].date)
-        cell.labelDate.text = dateStr
+        cell.setup(cellModel: cellModel)
 
         return cell
     }

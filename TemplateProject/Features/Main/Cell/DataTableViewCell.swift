@@ -8,7 +8,18 @@
 import UIKit
 
 class DataTableViewCell: UITableViewCell {
-    @IBOutlet weak var labelKindOfCost: UILabel!
-    @IBOutlet weak var labelCost: UILabel!
-    @IBOutlet weak var labelDate: UILabel!
+    // MARK: Internal
+
+    func setup(cellModel: DataTableViewCellModel) {
+        labelKindOfCost.isHidden = true
+        labelKindOfCost.text = cellModel.kindOfCost
+        labelCost.text = "\(cellModel.cost)"
+        labelDate.text = cellModel.Date
+    }
+
+    // MARK: Private
+
+    @IBOutlet private weak var labelKindOfCost: UILabel!
+    @IBOutlet private weak var labelCost: UILabel!
+    @IBOutlet private weak var labelDate: UILabel!
 }
