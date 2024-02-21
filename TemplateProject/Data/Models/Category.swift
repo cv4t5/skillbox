@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Category {
-    var name: String = ""
+class Category: Object {
+    @Persisted(primaryKey: true) var id: String
+    @Persisted var name: String
 }

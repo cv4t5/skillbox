@@ -11,7 +11,7 @@ class DataTableViewCell: UITableViewCell {
     // MARK: Internal
 
     func setup(cellModel: DataTableViewCellModel) {
-        labelKindOfCost.isHidden = true
+        labelKindOfCost.isHidden = cellModel.kindOfCost.isEmpty
         labelKindOfCost.text = cellModel.kindOfCost
         labelCost.text = "\(cellModel.cost)"
         labelDate.text = cellModel.Date

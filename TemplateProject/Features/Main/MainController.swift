@@ -6,13 +6,14 @@
 //
 
 import RealmSwift
+import SwiftUI
 import UIKit
 
-class ViewController: UIViewController {
+class MainController: UIViewController {
     // MARK: Internal
 
-    var incomes = List<Income>()
-    var costs = List<Costs>()
+    var incomes = RealmSwift.List<Income>()
+    var costs = RealmSwift.List<Costs>()
     // var Category = List<Category>()
     var bottomView: UIView?
     var textFieldOperationName: UITextField?
@@ -22,13 +23,8 @@ class ViewController: UIViewController {
     let stackView = UIStackView()
     var logoView = UIView()
 
-    @IBOutlet weak var stackViewCell: UIStackView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        logoView = LogoVIew.loadViewFromNib()!
-        view.addSubview(logoView)
 
         setupUI()
 
@@ -121,7 +117,7 @@ class ViewController: UIViewController {
 
 // MARK: UITableViewDataSource, UITableViewDelegate
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         segmentStatement.selectedSegmentIndex == 0 ? incomes.count : costs.count
     }
@@ -140,13 +136,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: setup UI
 
-extension ViewController {
+extension MainController {
     func setupUI() {
         prepareUI()
         prepareLayout()
     }
 
     func prepareUI() {
+        logoView = LogoVIew.loadViewFromNib()!
+        view.addSubview(logoView)
+
         mainTableView.translatesAutoresizingMaskIntoConstraints = false
 
         segmentStatement.translatesAutoresizingMaskIntoConstraints = false
@@ -215,12 +214,10 @@ extension ViewController {
 
 // MARK: Generate some UIView items
 
-extension ViewController {
+extension MainController {
     private func generateAddOperationViewBottom() -> UIView {
         let viewHeight: CGFloat = segmentStatement.selectedSegmentIndex == 0 ? 130 : 180
         let bottomView = UIView(frame: CGRect(x: 0, y: view.frame.size.height - viewHeight - 65, width: view.frame.width, height: viewHeight))
-        bottomView.layer.borderWidth = 3
-        bottomView.layer.borderColor = UIColor.black.cgColor
         bottomView.backgroundColor = .white
 
         textFieldOperationSum = UITextField()
@@ -280,5 +277,23 @@ extension ViewController {
         ])
 
         return bottomView
+    }
+}
+
+// MARK: Representable
+
+struct MainControllerRepresentable: UIViewControllerRepresentable {
+    typealias UIViewControllerType = MainController
+
+    func makeUIViewController(context: Context) -> MainController {
+        MainController()
+    }
+
+    func updateUIViewController(_ uiViewController: MainController, context: Context) {}
+}
+
+struct MainControllerPreviews: PreviewProvider {
+    static var previews: some View {
+        MainControllerRepresentable()
     }
 }

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		BC6690563ABA48695264097E /* Pods_TemplateProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CB6F44C557ADB15E81403E /* Pods_TemplateProject.framework */; };
 		F02A4EF62B855ACA000C2D0D /* DataTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A4EF52B855ACA000C2D0D /* DataTableViewCellModel.swift */; };
+		F02A4EF92B856254000C2D0D /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A4EF82B856254000C2D0D /* CategoryController.swift */; };
+		F040D4882B8577EA00BE5786 /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4872B8577EA00BE5786 /* CategoryCellModel.swift */; };
+		F040D48A2B85781500BE5786 /* CategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4892B85781500BE5786 /* CategoryCellView.swift */; };
+		F040D48C2B8587BB00BE5786 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D48B2B8587BB00BE5786 /* CategoryService.swift */; };
 		F079D2292B82C552004F8187 /* LogoVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = F079D2282B82C552004F8187 /* LogoVIew.xib */; };
 		F079D22C2B82C812004F8187 /* LogoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D22B2B82C812004F8187 /* LogoVIew.swift */; };
 		F079D2382B82E26B004F8187 /* GraphicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D2372B82E26B004F8187 /* GraphicsController.swift */; };
@@ -31,6 +35,10 @@
 		915A30B09AD95177BDB60DC8 /* Pods-TemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.release.xcconfig"; path = "Target Support Files/Pods-TemplateProject/Pods-TemplateProject.release.xcconfig"; sourceTree = "<group>"; };
 		C4CB6F44C557ADB15E81403E /* Pods_TemplateProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02A4EF52B855ACA000C2D0D /* DataTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCellModel.swift; sourceTree = "<group>"; };
+		F02A4EF82B856254000C2D0D /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		F040D4872B8577EA00BE5786 /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
+		F040D4892B85781500BE5786 /* CategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
+		F040D48B2B8587BB00BE5786 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		F079D2282B82C552004F8187 /* LogoVIew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoVIew.xib; sourceTree = "<group>"; };
 		F079D22B2B82C812004F8187 /* LogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVIew.swift; sourceTree = "<group>"; };
 		F079D2372B82E26B004F8187 /* GraphicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsController.swift; sourceTree = "<group>"; };
@@ -79,6 +87,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F02A4EF72B856236000C2D0D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F040D4862B8577D100BE5786 /* CellModels */,
+				F040D4852B8577C900BE5786 /* Cell */,
+				F02A4EF82B856254000C2D0D /* CategoryController.swift */,
+				F040D48B2B8587BB00BE5786 /* CategoryService.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F040D4852B8577C900BE5786 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F040D4892B85781500BE5786 /* CategoryCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F040D4862B8577D100BE5786 /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				F040D4872B8577EA00BE5786 /* CategoryCellModel.swift */,
+			);
+			path = CellModels;
+			sourceTree = "<group>";
+		};
 		F079D2432B84BED5004F8187 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +134,7 @@
 		F079D2452B84BF0B004F8187 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F02A4EF72B856236000C2D0D /* Category */,
 				F079D2482B84BF79004F8187 /* Graphics */,
 				F079D2472B84BF62004F8187 /* Main */,
 			);
@@ -364,17 +400,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F097C8402B73F67B00AEDE0D /* MainController.swift in Sources */,
+				F040D48A2B85781500BE5786 /* CategoryCellView.swift in Sources */,
+				F02A4EF92B856254000C2D0D /* CategoryController.swift in Sources */,
 				F079D23C2B83EDE3004F8187 /* DataTableViewCell.swift in Sources */,
 				F079D2382B82E26B004F8187 /* GraphicsController.swift in Sources */,
 				F079D22C2B82C812004F8187 /* LogoVIew.swift in Sources */,
 				F097C83C2B73F67B00AEDE0D /* AppDelegate.swift in Sources */,
 				F079D2422B83F001004F8187 /* Category.swift in Sources */,
+				F040D4882B8577EA00BE5786 /* CategoryCellModel.swift in Sources */,
 				F097C83E2B73F67B00AEDE0D /* SceneDelegate.swift in Sources */,
 				F079D2402B83EEC5004F8187 /* Income.swift in Sources */,
 				F079D2512B851C6F004F8187 /* MainService.swift in Sources */,
 				F02A4EF62B855ACA000C2D0D /* DataTableViewCellModel.swift in Sources */,
 				F079D23E2B83EEB6004F8187 /* Costs.swift in Sources */,
 				F079D24F2B84C0F6004F8187 /* RealmService.swift in Sources */,
+				F040D48C2B8587BB00BE5786 /* CategoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
