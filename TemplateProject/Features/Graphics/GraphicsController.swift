@@ -128,6 +128,10 @@ extension GraphicsController: UIPickerViewDelegate, UIPickerViewDataSource, UITa
         category[row].name
     }
 
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        segmentControlChangeIndex()
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let graphicModels = graphicModels {
             return graphicModels.count
