@@ -25,28 +25,32 @@ class CategoryCellView: UITableViewCell {
 
     // MARK: Internal
 
-    let label = UILabel()
-
     func setup(categoryModel: CategoryCellModel) {
         label.text = categoryModel.name
     }
+
+    // MARK: Private
+
+    private let label = UILabel()
 }
 
 // MARK: setup UI cell
 
 extension CategoryCellView {
-    func setupUI() {
+    private func setupUI() {
         prepareUI()
         prepareLayout()
     }
 
-    func prepareUI() {
+    private func prepareUI() {
+        contentView.backgroundColor = .gray
+
         contentView.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
     }
 
-    func prepareLayout() {
+    private func prepareLayout() {
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),

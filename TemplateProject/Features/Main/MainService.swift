@@ -34,12 +34,13 @@ class MainService {
         }
     }
 
-    func saveCost(amount: Float, name: String) {
+    func saveCost(amount: Float, name: String, category: Category) {
         let cost = Costs()
         cost.amount = amount
         cost.date = Date()
         cost.name = name
         cost.id = "\(cost.date)"
+        cost.category = category
 
         try? realmService.saveOrUpdateObject(object: cost)
     }

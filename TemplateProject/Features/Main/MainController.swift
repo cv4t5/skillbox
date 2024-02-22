@@ -10,18 +10,13 @@ import SwiftUI
 import UIKit
 
 class MainController: UIViewController {
-    // MARK: Internal
+    // MARK: Lifecycle
 
-    var incomes = RealmSwift.List<Income>()
-    var costs = RealmSwift.List<Costs>()
-    // var Category = List<Category>()
-    var bottomView: UIView?
-    var textFieldOperationName: UITextField?
-    var textFieldOperationSum: UITextField?
-    let service = MainService()
-    let header = UIView()
-    let stackView = UIStackView()
-    var logoView = UIView()
+    deinit {
+        removeKeyboardNotifications()
+    }
+
+    // MARK: Internal
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,64 +25,27 @@ class MainController: UIViewController {
 
         costs = service.getCosts()
         incomes = service.getIncomes()
+        category = serviceCategory.getCategories()
+        print(costs)
 
         mainTableView.reloadData()
         labelBalance.text = "Баланс: \(service.getUserBalance()) ₴"
     }
 
-    @IBAction
-    func buttonOperationAddTouchUp(_ sender: Any) {
-        bottomView = generateAddOperationViewBottom()
-        if let bottomView = bottomView {
-            view.addSubview(bottomView)
-        }
-    }
-
-    @IBAction
-    func buttonOperationDeleteTouchUp(_ sender: Any) {
-        if let index = mainTableView.indexPathForSelectedRow?.row {
-            if segmentStatement.selectedSegmentIndex == 0 {
-                service.deleteIncome(index: index)
-                labelBalance.text = "Баланс: \(service.getUserBalance()) ₴"
-            } else {
-                service.deleteCosts(index: index)
-            }
-            updateArrayOfCostsAndIncomes()
-            mainTableView.reloadData()
-        }
-    }
-
-    @IBAction
-    func segmentStateIndexChanged(_ sender: Any) {
-        labelKindOfCost.isHidden = segmentStatement.selectedSegmentIndex == 0
-        mainTableView.reloadData()
-    }
-
-    @objc
-    func buttonAddBottomViewTouchUp() {
-        guard let textFieldName = textFieldOperationName, let textFieldSum = textFieldOperationSum else { return }
-        guard let strName = textFieldName.text, let amountStr = textFieldSum.text, let amount = Float(amountStr) else { return }
-        if segmentStatement.selectedSegmentIndex == 0 {
-            service.saveIncome(amount: amount)
-            labelBalance.text = "Баланс: \(service.getUserBalance()) ₴"
-        } else {
-            service.saveCost(amount: amount, name: strName)
-        }
-        updateArrayOfCostsAndIncomes()
-
-        bottomView?.removeFromSuperview()
-        mainTableView.reloadData()
-    }
-
-    func updateArrayOfCostsAndIncomes() {
-        if segmentStatement.selectedSegmentIndex == 0 {
-            incomes = service.getIncomes()
-        } else {
-            costs = service.getCosts()
-        }
-    }
-
     // MARK: Private
+
+    private var incomes = RealmSwift.List<Income>()
+    private var costs = RealmSwift.List<Costs>()
+    private var category = RealmSwift.List<Category>()
+    private var bottomView = UIView()
+    private var textFieldOperationName: UITextField?
+    private var textFieldOperationSum: UITextField?
+    private let service = MainService()
+    private let serviceCategory = CategoryService()
+    private let header = UIView()
+    private let stackView = UIStackView()
+    private var logoView = UIView()
+    private let pickerview = UIPickerView()
 
     @IBOutlet private weak var segmentStatement: UISegmentedControl!
     @IBOutlet private weak var mainTableView: UITableView!
@@ -113,11 +71,111 @@ class MainController: UIViewController {
         label.text = "Скільки"
         return label
     }()
+
+    private func registerForKeyboardNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: MainController.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: MainController.keyboardWillHideNotification, object: nil)
+    }
+
+    private func removeKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: MainController.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: MainController.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc
+    private func keyboardShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[MainController.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            view.frame.origin.y = 0
+            view.frame.origin.y -= keyboardSize.height
+
+            NSLayoutConstraint.activate([
+                bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            ])
+        }
+    }
+
+    @objc
+    private func keyboardHide() {
+        view.frame.origin.y = 0
+
+        NSLayoutConstraint.activate([
+            bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+        ])
+    }
+
+    @IBAction
+    private func buttonOperationAddTouchUp(_ sender: Any) {
+        category = serviceCategory.getCategories()
+        bottomView = generateAddOperationViewBottom()
+        registerForKeyboardNotification()
+        view.addSubview(bottomView)
+
+        NSLayoutConstraint.activate([
+            bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            bottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            bottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            bottomView.heightAnchor.constraint(equalToConstant: segmentStatement.selectedSegmentIndex == 0 ? 180 : 300)
+        ])
+    }
+
+    @IBAction
+    private func buttonOperationDeleteTouchUp(_ sender: Any) {
+        if let index = mainTableView.indexPathForSelectedRow?.row {
+            if segmentStatement.selectedSegmentIndex == 0 {
+                service.deleteIncome(index: index)
+                labelBalance.text = "Баланс: \(service.getUserBalance()) ₴"
+            } else {
+                service.deleteCosts(index: index)
+            }
+            updateArrayOfCostsAndIncomes()
+            mainTableView.reloadData()
+        }
+    }
+
+    @IBAction
+    private func segmentStateIndexChanged(_ sender: Any) {
+        labelKindOfCost.isHidden = segmentStatement.selectedSegmentIndex == 0
+        mainTableView.reloadData()
+    }
+
+    @objc
+    private func buttonAddBottomViewTouchUp() {
+        guard let textFieldName = textFieldOperationName, let textFieldSum = textFieldOperationSum else { return }
+        guard let strName = textFieldName.text, let amountStr = textFieldSum.text, let amount = Float(amountStr) else { return }
+        if segmentStatement.selectedSegmentIndex == 0 {
+            service.saveIncome(amount: amount)
+            labelBalance.text = "Баланс: \(service.getUserBalance()) ₴"
+        } else {
+            if pickerview.selectedRow(inComponent: 0) != -1 {
+                let category = category[pickerview.selectedRow(inComponent: 0)]
+                service.saveCost(amount: amount, name: strName, category: category)
+            }
+        }
+        updateArrayOfCostsAndIncomes()
+
+        removeKeyboardNotifications()
+        bottomView.removeFromSuperview()
+        mainTableView.reloadData()
+    }
+
+    @objc
+    private func buttonCloseBottomViewTouchUp() {
+        removeKeyboardNotifications()
+        bottomView.removeFromSuperview()
+    }
+
+    private func updateArrayOfCostsAndIncomes() {
+        if segmentStatement.selectedSegmentIndex == 0 {
+            incomes = service.getIncomes()
+        } else {
+            costs = service.getCosts()
+        }
+    }
 }
 
-// MARK: UITableViewDataSource, UITableViewDelegate
+// MARK: UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource
 
-extension MainController: UITableViewDataSource, UITableViewDelegate {
+extension MainController: UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         segmentStatement.selectedSegmentIndex == 0 ? incomes.count : costs.count
     }
@@ -132,17 +190,29 @@ extension MainController: UITableViewDataSource, UITableViewDelegate {
 
         return cell
     }
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        category.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        category[row].name
+    }
 }
 
 // MARK: setup UI
 
 extension MainController {
-    func setupUI() {
+    private func setupUI() {
         prepareUI()
         prepareLayout()
     }
 
-    func prepareUI() {
+    private func prepareUI() {
         logoView = LogoVIew.loadViewFromNib()!
         view.addSubview(logoView)
 
@@ -173,7 +243,7 @@ extension MainController {
         mainTableView.tableHeaderView = header
     }
 
-    func prepareLayout() {
+    private func prepareLayout() {
         NSLayoutConstraint.activate([
             mainTableView.topAnchor.constraint(equalTo: buttonOperationAdd.bottomAnchor, constant: 16),
             mainTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
@@ -216,9 +286,9 @@ extension MainController {
 
 extension MainController {
     private func generateAddOperationViewBottom() -> UIView {
-        let viewHeight: CGFloat = segmentStatement.selectedSegmentIndex == 0 ? 130 : 180
-        let bottomView = UIView(frame: CGRect(x: 0, y: view.frame.size.height - viewHeight - 65, width: view.frame.width, height: viewHeight))
+        let bottomView = UIView()
         bottomView.backgroundColor = .white
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
 
         textFieldOperationSum = UITextField()
         textFieldOperationName = UITextField()
@@ -237,6 +307,29 @@ extension MainController {
                 textFieldOperationSum.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
             ])
         } else {
+            let labelCategoryText = UILabel()
+            labelCategoryText.text = "Оберіть категорію"
+            labelCategoryText.textAlignment = .center
+            labelCategoryText.translatesAutoresizingMaskIntoConstraints = false
+            bottomView.addSubview(labelCategoryText)
+            NSLayoutConstraint.activate([
+                labelCategoryText.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 16),
+                labelCategoryText.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+                labelCategoryText.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+            ])
+
+            pickerview.dataSource = self
+            pickerview.delegate = self
+            pickerview.translatesAutoresizingMaskIntoConstraints = false
+            bottomView.addSubview(pickerview)
+
+            NSLayoutConstraint.activate([
+                pickerview.topAnchor.constraint(equalTo: labelCategoryText.bottomAnchor, constant: 0),
+                pickerview.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+                pickerview.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
+                pickerview.heightAnchor.constraint(equalToConstant: 50)
+            ])
+
             textFieldOperationName.placeholder = "Опис витрати"
             textFieldOperationName.borderStyle = .roundedRect
 
@@ -249,7 +342,7 @@ extension MainController {
 
             textFieldOperationName.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                textFieldOperationName.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 16),
+                textFieldOperationName.topAnchor.constraint(equalTo: pickerview.bottomAnchor, constant: 16),
                 textFieldOperationName.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
                 textFieldOperationName.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
             ])
@@ -269,11 +362,25 @@ extension MainController {
         buttonAdd.addTarget(self, action: #selector(buttonAddBottomViewTouchUp), for: .touchUpInside)
         bottomView.addSubview(buttonAdd)
 
+        let buttonClose = UIButton()
+        buttonClose.setTitle("Закрити", for: .normal)
+        buttonClose.backgroundColor = .blue
+        buttonClose.layer.cornerRadius = 15
+        buttonClose.addTarget(self, action: #selector(buttonCloseBottomViewTouchUp), for: .touchUpInside)
+        bottomView.addSubview(buttonClose)
+
         buttonAdd.translatesAutoresizingMaskIntoConstraints = false
+        buttonClose.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             buttonAdd.topAnchor.constraint(equalTo: textFieldOperationSum.bottomAnchor, constant: 16),
             buttonAdd.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
             buttonAdd.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+        ])
+
+        NSLayoutConstraint.activate([
+            buttonClose.topAnchor.constraint(equalTo: buttonAdd.bottomAnchor, constant: 16),
+            buttonClose.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+            buttonClose.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
         ])
 
         return bottomView

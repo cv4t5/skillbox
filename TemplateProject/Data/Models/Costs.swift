@@ -9,8 +9,7 @@ import Foundation
 import RealmSwift
 
 class Costs: Object {
-    // @objc dynamic var category: Category = Category()
-
+    @Persisted var category: Category?
     @Persisted(primaryKey: true) var id = ""
     @Persisted var name = ""
     @Persisted var amount: Float = 0

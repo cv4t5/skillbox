@@ -11,17 +11,13 @@ import SwiftUI
 import UIKit
 
 class CategoryController: UIViewController {
-    var logoView = UIView()
-    let labelTitle = UILabel()
-    let categoryTable = UITableView()
-    let categoryCell = UITableViewCell()
-    let buttonAddCategory = UIButton()
-    let buttonDelCategory = UIButton()
-    var textFieldOperationName = UITextField()
-    let service = CategoryService()
-    var bottomView = UIView()
+    // MARK: Lifecycle
 
-    var categories = RealmSwift.List<Category>()
+    deinit {
+        removeKeyboardNotifications()
+    }
+
+    // MARK: Internal
 
     override func viewDidLoad() {
         setupUI()
@@ -30,14 +26,64 @@ class CategoryController: UIViewController {
         categoryTable.reloadData()
     }
 
-    @objc
-    func buttonAddCategoryTouchUp() {
-        bottomView = generateAddOperationViewBottom()
-        view.addSubview(bottomView)
+    // MARK: Private
+
+    private var categories = RealmSwift.List<Category>()
+
+    private var logoView = UIView()
+    private let labelTitle = UILabel()
+    private let categoryTable = UITableView()
+    private let buttonAddCategory = UIButton()
+    private let buttonDelCategory = UIButton()
+    private var textFieldOperationName = UITextField()
+    private let service = CategoryService()
+    private var bottomView = UIView()
+
+    private func registerForKeyboardNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: CategoryController.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: CategoryController.keyboardWillHideNotification, object: nil)
+    }
+
+    private func removeKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: CategoryController.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: CategoryController.keyboardWillHideNotification, object: nil)
     }
 
     @objc
-    func buttonDelCategoryTouchUp() {
+    private func keyboardShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[CategoryController.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            view.frame.origin.y -= keyboardSize.height
+
+            NSLayoutConstraint.activate([
+                bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            ])
+        }
+    }
+
+    @objc
+    private func keyboardHide() {
+        view.frame.origin.y = 0
+        NSLayoutConstraint.activate([
+            bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+        ])
+    }
+
+    @objc
+    private func buttonAddCategoryTouchUp() {
+        bottomView = generateAddOperationViewBottom()
+        registerForKeyboardNotification()
+        view.addSubview(bottomView)
+
+        NSLayoutConstraint.activate([
+            bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            bottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            bottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            bottomView.heightAnchor.constraint(equalToConstant: 180)
+        ])
+    }
+
+    @objc
+    private func buttonDelCategoryTouchUp() {
         if let index = categoryTable.indexPathForSelectedRow?.row {
             service.deleteCategory(index: index)
             categories = service.getCategories()
@@ -49,12 +95,12 @@ class CategoryController: UIViewController {
 // MARK: setup UI
 
 extension CategoryController {
-    func setupUI() {
+    private func setupUI() {
         prepareUI()
         prepareLayout()
     }
 
-    func prepareUI() {
+    private func prepareUI() {
         logoView = LogoVIew.loadViewFromNib()!
         logoView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoView)
@@ -66,14 +112,11 @@ extension CategoryController {
         view.addSubview(labelTitle)
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
 
-        categoryCell.translatesAutoresizingMaskIntoConstraints = false
-
         categoryTable.translatesAutoresizingMaskIntoConstraints = false
         categoryTable.dataSource = self
         categoryTable.delegate = self
         categoryTable.register(CategoryCellView.self, forCellReuseIdentifier: "CategoryCell")
         categoryTable.backgroundColor = .gray
-        categoryTable.addSubview(categoryCell)
         view.addSubview(categoryTable)
 
         buttonAddCategory.setTitle("Додати", for: .normal)
@@ -91,7 +134,7 @@ extension CategoryController {
         view.addSubview(buttonDelCategory)
     }
 
-    func prepareLayout() {
+    private func prepareLayout() {
         NSLayoutConstraint.activate([
             logoView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             logoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
@@ -119,15 +162,8 @@ extension CategoryController {
         NSLayoutConstraint.activate([
             categoryTable.topAnchor.constraint(equalTo: labelTitle.bottomAnchor, constant: 16),
             categoryTable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
-            categoryTable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8)
-            // categoryTable.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8)
-        ])
-
-        NSLayoutConstraint.activate([
-            categoryCell.topAnchor.constraint(equalTo: categoryTable.topAnchor, constant: 0),
-            categoryCell.leadingAnchor.constraint(equalTo: categoryTable.leadingAnchor, constant: 0),
-            categoryCell.trailingAnchor.constraint(equalTo: categoryTable.trailingAnchor, constant: 0),
-            categoryCell.bottomAnchor.constraint(equalTo: categoryTable.bottomAnchor, constant: 0)
+            categoryTable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            categoryTable.bottomAnchor.constraint(equalTo: buttonDelCategory.topAnchor, constant: -16)
         ])
     }
 }
@@ -142,7 +178,6 @@ extension CategoryController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCellView else { return UITableViewCell() }
 
-        cell.backgroundColor = .gray
         let cellModel = CategoryCellModel(name: categories[indexPath.row].name)
         cell.setup(categoryModel: cellModel)
 
@@ -154,9 +189,9 @@ extension CategoryController: UITableViewDataSource, UITableViewDelegate {
 
 extension CategoryController {
     private func generateAddOperationViewBottom() -> UIView {
-        let viewHeight: CGFloat = 130
-        let bottomView = UIView(frame: CGRect(x: 0, y: view.frame.size.height - viewHeight - 65, width: view.frame.width, height: viewHeight))
+        let bottomView = UIView()
         bottomView.backgroundColor = .white
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
 
         textFieldOperationName.placeholder = "Назва категорії"
         textFieldOperationName.borderStyle = .roundedRect
@@ -177,25 +212,46 @@ extension CategoryController {
         buttonAdd.addTarget(self, action: #selector(buttonAddBottomViewTouchUp), for: .touchUpInside)
         bottomView.addSubview(buttonAdd)
 
+        let buttonClose = UIButton()
+        buttonClose.setTitle("Закрити", for: .normal)
+        buttonClose.backgroundColor = .blue
+        buttonClose.layer.cornerRadius = 15
+        buttonClose.addTarget(self, action: #selector(buttonCloseBottomViewTouchUp), for: .touchUpInside)
+        bottomView.addSubview(buttonClose)
+
         buttonAdd.translatesAutoresizingMaskIntoConstraints = false
+        buttonClose.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             buttonAdd.topAnchor.constraint(equalTo: textFieldOperationName.bottomAnchor, constant: 16),
             buttonAdd.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
             buttonAdd.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
         ])
 
+        NSLayoutConstraint.activate([
+            buttonClose.topAnchor.constraint(equalTo: buttonAdd.bottomAnchor, constant: 16),
+            buttonClose.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+            buttonClose.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+        ])
+
         return bottomView
     }
 
     @objc
-    func buttonAddBottomViewTouchUp() {
+    private func buttonAddBottomViewTouchUp() {
         guard let strName = textFieldOperationName.text else { return }
 
         service.saveCategory(name: strName)
         categories = service.getCategories()
 
         bottomView.removeFromSuperview()
+        removeKeyboardNotifications()
         categoryTable.reloadData()
+    }
+
+    @objc
+    private func buttonCloseBottomViewTouchUp() {
+        bottomView.removeFromSuperview()
+        removeKeyboardNotifications()
     }
 }
 

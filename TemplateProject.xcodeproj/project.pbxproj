@@ -13,6 +13,9 @@
 		F040D4882B8577EA00BE5786 /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4872B8577EA00BE5786 /* CategoryCellModel.swift */; };
 		F040D48A2B85781500BE5786 /* CategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4892B85781500BE5786 /* CategoryCellView.swift */; };
 		F040D48C2B8587BB00BE5786 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D48B2B8587BB00BE5786 /* CategoryService.swift */; };
+		F040D4902B86F25800BE5786 /* GraphicCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D48F2B86F25800BE5786 /* GraphicCellView.swift */; };
+		F040D4922B86F3B100BE5786 /* GraphicCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4912B86F3B100BE5786 /* GraphicCellModel.swift */; };
+		F040D4962B8700DD00BE5786 /* GraphicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4952B8700DD00BE5786 /* GraphicService.swift */; };
 		F079D2292B82C552004F8187 /* LogoVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = F079D2282B82C552004F8187 /* LogoVIew.xib */; };
 		F079D22C2B82C812004F8187 /* LogoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D22B2B82C812004F8187 /* LogoVIew.swift */; };
 		F079D2382B82E26B004F8187 /* GraphicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D2372B82E26B004F8187 /* GraphicsController.swift */; };
@@ -39,6 +42,9 @@
 		F040D4872B8577EA00BE5786 /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
 		F040D4892B85781500BE5786 /* CategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
 		F040D48B2B8587BB00BE5786 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		F040D48F2B86F25800BE5786 /* GraphicCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCellView.swift; sourceTree = "<group>"; };
+		F040D4912B86F3B100BE5786 /* GraphicCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCellModel.swift; sourceTree = "<group>"; };
+		F040D4952B8700DD00BE5786 /* GraphicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicService.swift; sourceTree = "<group>"; };
 		F079D2282B82C552004F8187 /* LogoVIew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoVIew.xib; sourceTree = "<group>"; };
 		F079D22B2B82C812004F8187 /* LogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVIew.swift; sourceTree = "<group>"; };
 		F079D2372B82E26B004F8187 /* GraphicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsController.swift; sourceTree = "<group>"; };
@@ -114,6 +120,22 @@
 			path = CellModels;
 			sourceTree = "<group>";
 		};
+		F040D48D2B86F22B00BE5786 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F040D48F2B86F25800BE5786 /* GraphicCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F040D48E2B86F23800BE5786 /* CellModel */ = {
+			isa = PBXGroup;
+			children = (
+				F040D4912B86F3B100BE5786 /* GraphicCellModel.swift */,
+			);
+			path = CellModel;
+			sourceTree = "<group>";
+		};
 		F079D2432B84BED5004F8187 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +189,10 @@
 		F079D2482B84BF79004F8187 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				F040D48E2B86F23800BE5786 /* CellModel */,
+				F040D48D2B86F22B00BE5786 /* Cell */,
 				F079D2372B82E26B004F8187 /* GraphicsController.swift */,
+				F040D4952B8700DD00BE5786 /* GraphicService.swift */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -404,9 +429,11 @@
 				F02A4EF92B856254000C2D0D /* CategoryController.swift in Sources */,
 				F079D23C2B83EDE3004F8187 /* DataTableViewCell.swift in Sources */,
 				F079D2382B82E26B004F8187 /* GraphicsController.swift in Sources */,
+				F040D4962B8700DD00BE5786 /* GraphicService.swift in Sources */,
 				F079D22C2B82C812004F8187 /* LogoVIew.swift in Sources */,
 				F097C83C2B73F67B00AEDE0D /* AppDelegate.swift in Sources */,
 				F079D2422B83F001004F8187 /* Category.swift in Sources */,
+				F040D4922B86F3B100BE5786 /* GraphicCellModel.swift in Sources */,
 				F040D4882B8577EA00BE5786 /* CategoryCellModel.swift in Sources */,
 				F097C83E2B73F67B00AEDE0D /* SceneDelegate.swift in Sources */,
 				F079D2402B83EEC5004F8187 /* Income.swift in Sources */,
@@ -414,6 +441,7 @@
 				F02A4EF62B855ACA000C2D0D /* DataTableViewCellModel.swift in Sources */,
 				F079D23E2B83EEB6004F8187 /* Costs.swift in Sources */,
 				F079D24F2B84C0F6004F8187 /* RealmService.swift in Sources */,
+				F040D4902B86F25800BE5786 /* GraphicCellView.swift in Sources */,
 				F040D48C2B8587BB00BE5786 /* CategoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

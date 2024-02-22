@@ -256,22 +256,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BA89445B-13E4-412A-8B2E-C2F52E2A5505"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TemplateProject/Features/Main/MainController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "buttonOperationDeleteTouchUp(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "391904AA-2CDF-4EE6-9833-C8A5CD52EDAF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -471,10 +455,10 @@
             filePath = "TemplateProject/Features/Main/MainController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "buttonAddBottomViewTouchUp()"
-            landmarkType = "7">
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "MainController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -503,9 +487,9 @@
             filePath = "TemplateProject/Features/Main/MainController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "buttonAddBottomViewTouchUp()"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "buttonOperationAddTouchUp(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -615,10 +599,10 @@
             filePath = "TemplateProject/Features/Category/CategoryController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "CategoryController"
-            landmarkType = "21">
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -631,9 +615,327 @@
             filePath = "TemplateProject/Features/Category/CategoryController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "generateAddOperationViewBottom()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2078699B-B90D-4E12-BAAA-29CF89AD4DA3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "CategoryController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "732BB8FA-8A96-4B2B-A3E3-40F74DECA06D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "registerForKeyboardNotification()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "732BB8FA-8A96-4B2B-A3E3-40F74DECA06D - 86743e73632beac4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardShow(notification: __C.NSNotification) -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "732BB8FA-8A96-4B2B-A3E3-40F74DECA06D - 86743e73632bea25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardShow(notification: __C.NSNotification) -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "732BB8FA-8A96-4B2B-A3E3-40F74DECA06D - 3fa0132eff306f56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.registerForKeyboardNotification() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E933D3A-404E-4D1B-A5A3-6ACB10F17E6C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "registerForKeyboardNotification()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E933D3A-404E-4D1B-A5A3-6ACB10F17E6C - 86743e73632beac4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardShow(notification: __C.NSNotification) -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "1E933D3A-404E-4D1B-A5A3-6ACB10F17E6C - 86743e73632beac4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardShow(notification: __C.NSNotification) -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "824">
+               </Location>
+               <Location
+                  uuid = "1E933D3A-404E-4D1B-A5A3-6ACB10F17E6C - 3fa0132eff306fb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.registerForKeyboardNotification() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03FBC1FD-2DF0-4245-A288-02D779CF77ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "keyboardShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E58CDA66-C8FE-46B0-9C7E-868DD3CF7F1A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "keyboardHide()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8981BFA-9953-46D2-B263-984162ACA577"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "keyboardHide()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0B53E68-1F98-45C5-86DE-46FA11AC4143"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "buttonAddCategoryTouchUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4D53E65-3A37-412A-91FE-F89D6D34EE80"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "buttonDelCategoryTouchUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87F9DEEB-2878-42EE-BBF6-7E89B65B0671"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "prepareLayout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F8CD790-AA01-4376-9D87-0A5239C5DFCA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "buttonAddBottomViewTouchUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6AC55C6A-A342-4A51-AF19-9CD2B961F8AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Category/CategoryController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "buttonCloseBottomViewTouchUp()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6AC55C6A-A342-4A51-AF19-9CD2B961F8AF - c6dd34378c103b25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.buttonCloseBottomViewTouchUp() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "252"
+                  endingLineNumber = "252"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "6AC55C6A-A342-4A51-AF19-9CD2B961F8AF - c6dd34378c103b04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.buttonCloseBottomViewTouchUp() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D4478FD-3418-4E49-9C64-937C7B283D9C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Graphics/GraphicService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "getFiltredCosts(category:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
