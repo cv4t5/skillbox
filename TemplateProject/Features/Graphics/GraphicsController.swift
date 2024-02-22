@@ -71,6 +71,7 @@ extension GraphicsController {
         segmentControl.insertSegment(withTitle: "Місяць", at: segmentControl.numberOfSegments, animated: false)
         segmentControl.insertSegment(withTitle: "Всі", at: segmentControl.numberOfSegments, animated: false)
         segmentControl.addTarget(self, action: #selector(segmentControlChangeIndex), for: .valueChanged)
+        segmentControl.selectedSegmentIndex = 2
         segmentControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(segmentControl)
 
