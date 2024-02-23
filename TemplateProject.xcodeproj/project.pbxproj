@@ -16,6 +16,11 @@
 		F040D4902B86F25800BE5786 /* GraphicCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D48F2B86F25800BE5786 /* GraphicCellView.swift */; };
 		F040D4922B86F3B100BE5786 /* GraphicCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4912B86F3B100BE5786 /* GraphicCellModel.swift */; };
 		F040D4962B8700DD00BE5786 /* GraphicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4952B8700DD00BE5786 /* GraphicService.swift */; };
+		F040D4982B87D45400BE5786 /* TextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4972B87D45400BE5786 /* TextFieldWithLabel.swift */; };
+		F040D49D2B883A9D00BE5786 /* IncomesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D49C2B883A9D00BE5786 /* IncomesController.swift */; };
+		F040D4A42B883BE300BE5786 /* CostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4A32B883BE300BE5786 /* CostsController.swift */; };
+		F040D4A72B883E3900BE5786 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4A62B883E3900BE5786 /* TabBarController.swift */; };
+		F040D4A92B884B8500BE5786 /* NavigationIncomes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4A82B884B8500BE5786 /* NavigationIncomes.swift */; };
 		F079D2292B82C552004F8187 /* LogoVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = F079D2282B82C552004F8187 /* LogoVIew.xib */; };
 		F079D22C2B82C812004F8187 /* LogoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D22B2B82C812004F8187 /* LogoVIew.swift */; };
 		F079D2382B82E26B004F8187 /* GraphicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079D2372B82E26B004F8187 /* GraphicsController.swift */; };
@@ -45,6 +50,11 @@
 		F040D48F2B86F25800BE5786 /* GraphicCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCellView.swift; sourceTree = "<group>"; };
 		F040D4912B86F3B100BE5786 /* GraphicCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCellModel.swift; sourceTree = "<group>"; };
 		F040D4952B8700DD00BE5786 /* GraphicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicService.swift; sourceTree = "<group>"; };
+		F040D4972B87D45400BE5786 /* TextFieldWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithLabel.swift; sourceTree = "<group>"; };
+		F040D49C2B883A9D00BE5786 /* IncomesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomesController.swift; sourceTree = "<group>"; };
+		F040D4A32B883BE300BE5786 /* CostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostsController.swift; sourceTree = "<group>"; };
+		F040D4A62B883E3900BE5786 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F040D4A82B884B8500BE5786 /* NavigationIncomes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationIncomes.swift; sourceTree = "<group>"; };
 		F079D2282B82C552004F8187 /* LogoVIew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoVIew.xib; sourceTree = "<group>"; };
 		F079D22B2B82C812004F8187 /* LogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVIew.swift; sourceTree = "<group>"; };
 		F079D2372B82E26B004F8187 /* GraphicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsController.swift; sourceTree = "<group>"; };
@@ -136,6 +146,31 @@
 			path = CellModel;
 			sourceTree = "<group>";
 		};
+		F040D4992B883A4F00BE5786 /* Incomes */ = {
+			isa = PBXGroup;
+			children = (
+				F040D49C2B883A9D00BE5786 /* IncomesController.swift */,
+				F040D4A82B884B8500BE5786 /* NavigationIncomes.swift */,
+			);
+			path = Incomes;
+			sourceTree = "<group>";
+		};
+		F040D4A02B883BC500BE5786 /* Costs */ = {
+			isa = PBXGroup;
+			children = (
+				F040D4A32B883BE300BE5786 /* CostsController.swift */,
+			);
+			path = Costs;
+			sourceTree = "<group>";
+		};
+		F040D4A52B883E0E00BE5786 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F040D4A62B883E3900BE5786 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		F079D2432B84BED5004F8187 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				F079D24B2B84BFE5004F8187 /* LogoView */,
+				F040D4972B87D45400BE5786 /* TextFieldWithLabel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -156,6 +192,9 @@
 		F079D2452B84BF0B004F8187 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F040D4A52B883E0E00BE5786 /* TabBar */,
+				F040D4A02B883BC500BE5786 /* Costs */,
+				F040D4992B883A4F00BE5786 /* Incomes */,
 				F02A4EF72B856236000C2D0D /* Category */,
 				F079D2482B84BF79004F8187 /* Graphics */,
 				F079D2472B84BF62004F8187 /* Main */,
@@ -424,10 +463,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F040D4A42B883BE300BE5786 /* CostsController.swift in Sources */,
 				F097C8402B73F67B00AEDE0D /* MainController.swift in Sources */,
 				F040D48A2B85781500BE5786 /* CategoryCellView.swift in Sources */,
 				F02A4EF92B856254000C2D0D /* CategoryController.swift in Sources */,
 				F079D23C2B83EDE3004F8187 /* DataTableViewCell.swift in Sources */,
+				F040D4A72B883E3900BE5786 /* TabBarController.swift in Sources */,
+				F040D4982B87D45400BE5786 /* TextFieldWithLabel.swift in Sources */,
 				F079D2382B82E26B004F8187 /* GraphicsController.swift in Sources */,
 				F040D4962B8700DD00BE5786 /* GraphicService.swift in Sources */,
 				F079D22C2B82C812004F8187 /* LogoVIew.swift in Sources */,
@@ -436,6 +478,8 @@
 				F040D4922B86F3B100BE5786 /* GraphicCellModel.swift in Sources */,
 				F040D4882B8577EA00BE5786 /* CategoryCellModel.swift in Sources */,
 				F097C83E2B73F67B00AEDE0D /* SceneDelegate.swift in Sources */,
+				F040D49D2B883A9D00BE5786 /* IncomesController.swift in Sources */,
+				F040D4A92B884B8500BE5786 /* NavigationIncomes.swift in Sources */,
 				F079D2402B83EEC5004F8187 /* Income.swift in Sources */,
 				F079D2512B851C6F004F8187 /* MainService.swift in Sources */,
 				F02A4EF62B855ACA000C2D0D /* DataTableViewCellModel.swift in Sources */,
@@ -600,7 +644,6 @@
 				INFOPLIST_FILE = TemplateProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,7 +672,6 @@
 				INFOPLIST_FILE = TemplateProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

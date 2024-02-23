@@ -26,7 +26,6 @@ class MainController: UIViewController {
         costs = service.getCosts()
         incomes = service.getIncomes()
         category = serviceCategory.getCategories()
-        print(costs)
 
         mainTableView.reloadData()
         labelBalance.text = "Баланс: \(service.getUserBalance()) ₴"
@@ -290,98 +289,110 @@ extension MainController {
         bottomView.backgroundColor = .white
         bottomView.translatesAutoresizingMaskIntoConstraints = false
 
-        textFieldOperationSum = UITextField()
-        textFieldOperationName = UITextField()
-        guard let textFieldOperationSum = textFieldOperationSum, let textFieldOperationName = textFieldOperationName else { return bottomView }
+//        textFieldOperationSum = UITextField()
+//        textFieldOperationName = UITextField()
+//        guard let textFieldOperationSum = textFieldOperationSum, let textFieldOperationName = textFieldOperationName else { return bottomView }
 
         if segmentStatement.selectedSegmentIndex == 0 {
-            textFieldOperationSum.placeholder = "Введіть суму прибутку"
-            textFieldOperationSum.borderStyle = .roundedRect
-
-            bottomView.addSubview(textFieldOperationSum)
-
-            textFieldOperationSum.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                textFieldOperationSum.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 16),
-                textFieldOperationSum.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-                textFieldOperationSum.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
-            ])
+//            textFieldOperationSum.placeholder = "Введіть суму прибутку"
+//            textFieldOperationSum.borderStyle = .roundedRect
+//            textFieldOperationSum.clearButtonMode = .whileEditing
+//
+//            bottomView.addSubview(textFieldOperationSum)
+//
+//            textFieldOperationSum.translatesAutoresizingMaskIntoConstraints = false
+//            NSLayoutConstraint.activate([
+//                textFieldOperationSum.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 16),
+//                textFieldOperationSum.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+//                textFieldOperationSum.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+//            ])
         } else {
-            let labelCategoryText = UILabel()
-            labelCategoryText.text = "Оберіть категорію"
-            labelCategoryText.textAlignment = .center
-            labelCategoryText.translatesAutoresizingMaskIntoConstraints = false
-            bottomView.addSubview(labelCategoryText)
-            NSLayoutConstraint.activate([
-                labelCategoryText.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 16),
-                labelCategoryText.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-                labelCategoryText.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
-            ])
-
-            pickerview.dataSource = self
-            pickerview.delegate = self
-            pickerview.translatesAutoresizingMaskIntoConstraints = false
-            bottomView.addSubview(pickerview)
-
-            NSLayoutConstraint.activate([
-                pickerview.topAnchor.constraint(equalTo: labelCategoryText.bottomAnchor, constant: 0),
-                pickerview.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-                pickerview.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
-                pickerview.heightAnchor.constraint(equalToConstant: 50)
-            ])
-
-            textFieldOperationName.placeholder = "Опис витрати"
-            textFieldOperationName.borderStyle = .roundedRect
-
-            textFieldOperationSum.placeholder = "Введіть суму витрати"
-            textFieldOperationSum.borderStyle = .roundedRect
-            textFieldOperationSum.keyboardType = .numberPad
-
-            bottomView.addSubview(textFieldOperationName)
-            bottomView.addSubview(textFieldOperationSum)
-
-            textFieldOperationName.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                textFieldOperationName.topAnchor.constraint(equalTo: pickerview.bottomAnchor, constant: 16),
-                textFieldOperationName.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-                textFieldOperationName.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
-            ])
-
-            textFieldOperationSum.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                textFieldOperationSum.topAnchor.constraint(equalTo: textFieldOperationName.bottomAnchor, constant: 16),
-                textFieldOperationSum.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-                textFieldOperationSum.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
-            ])
+//            let labelCategoryText = UILabel()
+//            labelCategoryText.text = "Оберіть категорію"
+//            labelCategoryText.textAlignment = .center
+//            labelCategoryText.translatesAutoresizingMaskIntoConstraints = false
+//            bottomView.addSubview(labelCategoryText)
+//            NSLayoutConstraint.activate([
+//                labelCategoryText.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 16),
+//                labelCategoryText.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+//                labelCategoryText.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+//            ])
+//
+//            pickerview.dataSource = self
+//            pickerview.delegate = self
+//            pickerview.translatesAutoresizingMaskIntoConstraints = false
+//            bottomView.addSubview(pickerview)
+//
+//            NSLayoutConstraint.activate([
+//                pickerview.topAnchor.constraint(equalTo: labelCategoryText.bottomAnchor, constant: 0),
+//                pickerview.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+//                pickerview.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
+//                pickerview.heightAnchor.constraint(equalToConstant: 50)
+//            ])
+//
+//            textFieldOperationName.placeholder = "Опис витрати"
+//            textFieldOperationName.borderStyle = .roundedRect
+//            textFieldOperationName.clearButtonMode = .whileEditing
+//
+//            textFieldOperationSum.placeholder = "Введіть суму витрати"
+//            textFieldOperationSum.borderStyle = .roundedRect
+//            textFieldOperationSum.keyboardType = .numberPad
+//
+//            bottomView.addSubview(textFieldOperationName)
+//            bottomView.addSubview(textFieldOperationSum)
+//
+//            let textFieldWithLabel = TextFieldWithLabel(text: "Description")
+//            textFieldWithLabel.translatesAutoresizingMaskIntoConstraints = false
+//            bottomView.addSubview(textFieldWithLabel)
+//
+//            textFieldOperationName.translatesAutoresizingMaskIntoConstraints = false
+//            NSLayoutConstraint.activate([
+//                textFieldOperationName.topAnchor.constraint(equalTo: pickerview.bottomAnchor, constant: 16),
+//                textFieldOperationName.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+//                textFieldOperationName.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+//            ])
+//
+//            textFieldOperationSum.translatesAutoresizingMaskIntoConstraints = false
+//            NSLayoutConstraint.activate([
+//                textFieldOperationSum.topAnchor.constraint(equalTo: textFieldOperationName.bottomAnchor, constant: 16),
+//                textFieldOperationSum.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+//                textFieldOperationSum.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+//            ])
+//
+//            NSLayoutConstraint.activate([
+//                textFieldWithLabel.topAnchor.constraint(equalTo: textFieldOperationSum.bottomAnchor, constant: 16),
+//                textFieldWithLabel.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+//                textFieldWithLabel.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+//            ])
         }
 
-        let buttonAdd = UIButton()
-        buttonAdd.setTitle(segmentStatement.selectedSegmentIndex == 0 ? "Додати прибуток" : "Додати витрату", for: .normal)
-        buttonAdd.backgroundColor = .blue
-        buttonAdd.layer.cornerRadius = 15
-        buttonAdd.addTarget(self, action: #selector(buttonAddBottomViewTouchUp), for: .touchUpInside)
-        bottomView.addSubview(buttonAdd)
-
-        let buttonClose = UIButton()
-        buttonClose.setTitle("Закрити", for: .normal)
-        buttonClose.backgroundColor = .blue
-        buttonClose.layer.cornerRadius = 15
-        buttonClose.addTarget(self, action: #selector(buttonCloseBottomViewTouchUp), for: .touchUpInside)
-        bottomView.addSubview(buttonClose)
-
-        buttonAdd.translatesAutoresizingMaskIntoConstraints = false
-        buttonClose.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            buttonAdd.topAnchor.constraint(equalTo: textFieldOperationSum.bottomAnchor, constant: 16),
-            buttonAdd.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-            buttonAdd.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
-        ])
-
-        NSLayoutConstraint.activate([
-            buttonClose.topAnchor.constraint(equalTo: buttonAdd.bottomAnchor, constant: 16),
-            buttonClose.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-            buttonClose.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
-        ])
+//        let buttonAdd = UIButton()
+//        buttonAdd.setTitle(segmentStatement.selectedSegmentIndex == 0 ? "Додати прибуток" : "Додати витрату", for: .normal)
+//        buttonAdd.backgroundColor = .blue
+//        buttonAdd.layer.cornerRadius = 15
+//        buttonAdd.addTarget(self, action: #selector(buttonAddBottomViewTouchUp), for: .touchUpInside)
+//        bottomView.addSubview(buttonAdd)
+//
+//        let buttonClose = UIButton()
+//        buttonClose.setTitle("Закрити", for: .normal)
+//        buttonClose.backgroundColor = .blue
+//        buttonClose.layer.cornerRadius = 15
+//        buttonClose.addTarget(self, action: #selector(buttonCloseBottomViewTouchUp), for: .touchUpInside)
+//        bottomView.addSubview(buttonClose)
+//
+//        buttonAdd.translatesAutoresizingMaskIntoConstraints = false
+//        buttonClose.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            buttonAdd.topAnchor.constraint(equalTo: textFieldOperationSum.bottomAnchor, constant: 16),
+//            buttonAdd.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+//            buttonAdd.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+//        ])
+//
+//        NSLayoutConstraint.activate([
+//            buttonClose.topAnchor.constraint(equalTo: buttonAdd.bottomAnchor, constant: 16),
+//            buttonClose.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+//            buttonClose.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+//        ])
 
         return bottomView
     }

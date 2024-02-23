@@ -298,6 +298,21 @@
                   endingLineNumber = "21"
                   offsetFromSymbolStart = "60">
                </Location>
+               <Location
+                  uuid = "391904AA-2CDF-4EE6-9833-C8A5CD52EDAF - 48509ebbb66024eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.RealmService.saveOrUpdateObject(object: __C.RealmSwiftObject) throws -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Data/Services/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "80">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -345,6 +360,21 @@
                   startingLineNumber = "21"
                   endingLineNumber = "21"
                   offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "95942F2A-1373-42C4-8E29-9DB0D4C96BE3 - 48509ebbb66024eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.RealmService.saveOrUpdateObject(object: __C.RealmSwiftObject) throws -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Data/Services/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "80">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -455,8 +485,8 @@
             filePath = "TemplateProject/Features/Main/MainController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "MainController"
             landmarkType = "3">
          </BreakpointContent>
@@ -487,8 +517,8 @@
             filePath = "TemplateProject/Features/Main/MainController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "buttonOperationAddTouchUp(_:)"
             landmarkType = "7">
             <Locations>
@@ -521,6 +551,21 @@
                   startingLineNumber = "79"
                   endingLineNumber = "79"
                   offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "004CFF53-34BB-4E66-90D0-73F3E99D039F - 4c6442e2f5caee41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.MainController.buttonOperationAddTouchUp(Any) -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Main/MainController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "1788">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -569,6 +614,21 @@
                   startingLineNumber = "23"
                   endingLineNumber = "23"
                   offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "778B591D-873D-4F29-9C4D-6CC7B630ACD9 - 80062cda83da6338"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in TemplateProject.RealmService.saveOrUpdateObject(object: __C.RealmSwiftObject) throws -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Data/Services/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -635,6 +695,113 @@
             endingLineNumber = "40"
             landmarkName = "CategoryController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2078699B-B90D-4E12-BAAA-29CF89AD4DA3 - 7b1f6add65d7170e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.buttonDelCategoryTouchUp() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "2078699B-B90D-4E12-BAAA-29CF89AD4DA3 - d0c204083536ee79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.bottomView.getter : __C.UIView"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "2078699B-B90D-4E12-BAAA-29CF89AD4DA3 - 54d1d2d76fb0616d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.bottomView.setter : __C.UIView"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2078699B-B90D-4E12-BAAA-29CF89AD4DA3 - 772723ded4177b58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.bottomView.modify : __C.UIView"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2078699B-B90D-4E12-BAAA-29CF89AD4DA3 - deb7b52d77ad0db5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.bottomView.modify : __C.UIView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "2078699B-B90D-4E12-BAAA-29CF89AD4DA3 - 8ae7d78a6e421f72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TemplateProject.CategoryController"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "2078699B-B90D-4E12-BAAA-29CF89AD4DA3 - 305d55a428742088"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TemplateProject.CategoryController&gt;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "512">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -695,6 +862,21 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
                   endingLineNumber = "44"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "732BB8FA-8A96-4B2B-A3E3-40F74DECA06D - 3fa0132eff306f79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.registerForKeyboardNotification() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
@@ -760,6 +942,21 @@
                   endingLineNumber = "45"
                   offsetFromSymbolStart = "380">
                </Location>
+               <Location
+                  uuid = "1E933D3A-404E-4D1B-A5A3-6ACB10F17E6C - 3fa0132eff306f56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.registerForKeyboardNotification() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "380">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -777,6 +974,38 @@
             endingLineNumber = "55"
             landmarkName = "keyboardShow(notification:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "03FBC1FD-2DF0-4245-A288-02D779CF77ED - 86743e73632bd459"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardShow(notification: __C.NSNotification) -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "824">
+               </Location>
+               <Location
+                  uuid = "03FBC1FD-2DF0-4245-A288-02D779CF77ED - 86743e73632bd5be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardShow(notification: __C.NSNotification) -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "824">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -793,6 +1022,38 @@
             endingLineNumber = "66"
             landmarkName = "keyboardHide()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E58CDA66-C8FE-46B0-9C7E-868DD3CF7F1A - b5a43b56499c16d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardHide() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "E58CDA66-C8FE-46B0-9C7E-868DD3CF7F1A - b5a43b56499c14c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardHide() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "340">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -809,6 +1070,38 @@
             endingLineNumber = "65"
             landmarkName = "keyboardHide()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B8981BFA-9953-46D2-B263-984162ACA577 - b5a43b56499c14c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardHide() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "B8981BFA-9953-46D2-B263-984162ACA577 - b5a43b56499c12f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.keyboardHide() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -825,6 +1118,38 @@
             endingLineNumber = "73"
             landmarkName = "buttonAddCategoryTouchUp()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0B53E68-1F98-45C5-86DE-46FA11AC4143 - 98d3a425ba611718"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.buttonAddCategoryTouchUp() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "B0B53E68-1F98-45C5-86DE-46FA11AC4143 - 98d3a425ba61177b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CategoryController.buttonAddCategoryTouchUp() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Category/CategoryController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -936,6 +1261,181 @@
             startingLineNumber = "14"
             endingLineNumber = "14"
             landmarkName = "getFiltredCosts(category:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D4478FD-3418-4E49-9C64-937C7B283D9C - 7e516766c73fadb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.GraphicService.getFiltredCosts(category: TemplateProject.Category) -&gt; Swift.Array&lt;TemplateProject.GraphicCellModel&gt;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Graphics/GraphicService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "3D4478FD-3418-4E49-9C64-937C7B283D9C - 7e516766c73fadb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.GraphicService.getFiltredCosts(category: TemplateProject.Category) -&gt; Swift.Array&lt;TemplateProject.GraphicCellModel&gt;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Graphics/GraphicService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E12801D7-4BC0-4ACC-95BF-5BFF74D9E00D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Common/TextFieldWithLabel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "init(text:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32137670-199D-40E9-9B97-6F78E03955AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Main/MainController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
+            landmarkName = "generateAddOperationViewBottom()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "32137670-199D-40E9-9B97-6F78E03955AB - 8314db77483c3ca3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.MainController.generateAddOperationViewBottom() -&gt; __C.UIView"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Main/MainController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "345"
+                  endingLineNumber = "345"
+                  offsetFromSymbolStart = "3400">
+               </Location>
+               <Location
+                  uuid = "32137670-199D-40E9-9B97-6F78E03955AB - 8314db77483c3ca3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.MainController.generateAddOperationViewBottom() -&gt; __C.UIView"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Main/MainController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "345"
+                  endingLineNumber = "345"
+                  offsetFromSymbolStart = "3408">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E1A4AEE-764E-4788-A7A6-350D970D7822"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Common/TextFieldWithLabel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "textFieldEditChanged()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E1A4AEE-764E-4788-A7A6-350D970D7822 - bb19f3d187c48f1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.TextFieldWithLabel.textFieldEditChanged() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Common/TextFieldWithLabel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "0E1A4AEE-764E-4788-A7A6-350D970D7822 - bb19f3d187c48f1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.TextFieldWithLabel.textFieldEditChanged() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Common/TextFieldWithLabel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "0E1A4AEE-764E-4788-A7A6-350D970D7822 - bb19f3d187c48ef3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.TextFieldWithLabel.textFieldEditChanged() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Common/TextFieldWithLabel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E88DB6EC-EC84-478D-820B-C9B2274100E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Incomes/NavigationIncomes.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "setupUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
