@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 import SwiftUI
 import UIKit
 
@@ -16,7 +17,13 @@ class IncomesController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
 
+        navigationItem.titleView = navView
+
         setupUI()
+
+        incomes = financeService.getIncomes()
+        navView.labelBalance.text = "\(financeService.getUserBalance()) ₴"
+        tableView.reloadData()
     }
 
     // MARK: Private
@@ -24,6 +31,11 @@ class IncomesController: UIViewController {
     private var bottomView = UIView()
     private let textFieldWithLabel = TextFieldWithLabel(text: "Сума")
     private let buttonAddIncome = UIButton()
+    private let navView = NavigationIncomes(title: "Доходи")
+    private let tableView = UITableView()
+    private var incomes = RealmSwift.List<Income>()
+    private let financeService = FinanceService()
+    private let buttonAdd = UIButton()
 
     private func registerForKeyboardNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: IncomesController.keyboardWillShowNotification, object: nil)
@@ -42,7 +54,7 @@ class IncomesController: UIViewController {
             view.frame.origin.y -= keyboardSize.height
 
             NSLayoutConstraint.activate([
-                bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+                bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
             ])
         }
     }
@@ -63,11 +75,13 @@ class IncomesController: UIViewController {
         registerForKeyboardNotification()
         view.addSubview(bottomView)
 
+        let constheight = bottomView.heightAnchor.constraint(equalToConstant: 160)
+        constheight.priority = .init(748)
         NSLayoutConstraint.activate([
             bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
             bottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             bottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            bottomView.heightAnchor.constraint(equalToConstant: 180)
+            constheight
         ])
     }
 }
@@ -87,13 +101,25 @@ extension IncomesController {
         buttonAddIncome.backgroundColor = .blue
         view.addSubview(buttonAddIncome)
         buttonAddIncome.translatesAutoresizingMaskIntoConstraints = false
+
+        tableView.dataSource = self
+        tableView.register(IncomesTableViewCell.self, forCellReuseIdentifier: "IncomeCell")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
     }
 
     private func prepareLayout() {
         NSLayoutConstraint.activate([
-            buttonAddIncome.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            buttonAddIncome.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 16),
             buttonAddIncome.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            buttonAddIncome.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+            buttonAddIncome.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            buttonAddIncome.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+        ])
+
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 45),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
         ])
     }
 }
@@ -102,11 +128,11 @@ extension IncomesController {
 
 extension IncomesController {
     private func generateAddOperationViewBottom() -> UIView {
-        // let bottomView = UIView()
         bottomView.backgroundColor = .white
 
-        // textFieldWithLabel = TextFieldWithLabel(text: "Сума")
         textFieldWithLabel.translatesAutoresizingMaskIntoConstraints = false
+        textFieldWithLabel.textField.keyboardType = .numberPad
+        textFieldWithLabel.textField.addTarget(self, action: #selector(textFieldWithLabelEditChanged), for: .editingChanged)
         bottomView.addSubview(textFieldWithLabel)
 
         NSLayoutConstraint.activate([
@@ -115,7 +141,6 @@ extension IncomesController {
             textFieldWithLabel.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: 0)
         ])
 
-        let buttonAdd = UIButton()
         buttonAdd.setTitle("Додати доход", for: .normal)
         buttonAdd.backgroundColor = .blue
         buttonAdd.layer.cornerRadius = 15
@@ -140,36 +165,51 @@ extension IncomesController {
         NSLayoutConstraint.activate([
             buttonClose.topAnchor.constraint(equalTo: buttonAdd.bottomAnchor, constant: 16),
             buttonClose.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-            buttonClose.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+            buttonClose.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
+            buttonClose.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: -16)
         ])
 
         return bottomView
     }
 
     @objc
+    private func textFieldWithLabelEditChanged() {
+        buttonAdd.isEnabled = !(textFieldWithLabel.textField.text?.isEmpty ?? true)
+    }
+
+    @objc
     private func buttonAddBottomViewTouchUp() {
-//        guard let textFieldName = textFieldOperationName, let textFieldSum = textFieldOperationSum else { return }
-//        guard let strName = textFieldName.text, let amountStr = textFieldSum.text, let amount = Float(amountStr) else { return }
-//        if segmentStatement.selectedSegmentIndex == 0 {
-//            service.saveIncome(amount: amount)
-//            labelBalance.text = "Баланс: \(service.getUserBalance()) ₴"
-//        } else {
-//            if pickerview.selectedRow(inComponent: 0) != -1 {
-//                let category = category[pickerview.selectedRow(inComponent: 0)]
-//                service.saveCost(amount: amount, name: strName, category: category)
-//            }
-//        }
-//        updateArrayOfCostsAndIncomes()
-//
-//        removeKeyboardNotifications()
-//        bottomView.removeFromSuperview()
-//        mainTableView.reloadData()
+        guard let strAmount = textFieldWithLabel.textField.text, let amount = Float(strAmount) else { return }
+
+        financeService.saveIncome(amount: amount)
+        navView.labelBalance.text = "\(financeService.getUserBalance()) ₴"
+        incomes = financeService.getIncomes()
+        tableView.reloadData()
+        bottomView.removeFromSuperview()
     }
 
     @objc
     private func buttonCloseBottomViewTouchUp() {
         removeKeyboardNotifications()
+        keyboardHide()
         bottomView.removeFromSuperview()
+    }
+}
+
+// MARK: UITableViewDataSource
+
+extension IncomesController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        incomes.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "IncomeCell") as? IncomesTableViewCell else { return UITableViewCell() }
+
+        let modelCell = IncomesTableViewCellModel(cost: incomes[indexPath.row].amount, Date: financeService.getStringDateTimeNow(date: incomes[indexPath.row].date))
+        cell.setupCell(cellModel: modelCell)
+
+        return cell
     }
 }
 

@@ -74,11 +74,13 @@ class CategoryController: UIViewController {
         registerForKeyboardNotification()
         view.addSubview(bottomView)
 
+        let constheight = bottomView.heightAnchor.constraint(equalToConstant: 180)
+        constheight.priority = .init(747)
         NSLayoutConstraint.activate([
             bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
             bottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             bottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            bottomView.heightAnchor.constraint(equalToConstant: 180)
+            constheight
         ])
     }
 
@@ -230,7 +232,8 @@ extension CategoryController {
         NSLayoutConstraint.activate([
             buttonClose.topAnchor.constraint(equalTo: buttonAdd.bottomAnchor, constant: 16),
             buttonClose.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-            buttonClose.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16)
+            buttonClose.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
+            buttonClose.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: -16)
         ])
 
         return bottomView

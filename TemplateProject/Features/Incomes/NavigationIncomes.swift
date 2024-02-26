@@ -68,7 +68,7 @@ extension NavigationIncomes {
 
         NSLayoutConstraint.activate([
             labelBalance.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            labelBalance.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8),
+            labelBalance.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             labelBalance.leadingAnchor.constraint(greaterThanOrEqualTo: labelTextCurrBalance.trailingAnchor, constant: 16),
             labelBalance.lastBaselineAnchor.constraint(equalTo: labelTextCurrBalance.lastBaselineAnchor)
         ])

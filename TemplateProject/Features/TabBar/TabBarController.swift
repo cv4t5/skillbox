@@ -34,12 +34,7 @@ class TabBarController: UITabBarController {
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
 
-        if navController.viewControllers.first != nil && navController.viewControllers.first is IncomesController {
-            let navView = NavigationIncomes(title: "Доходи")
-            navController.viewControllers.first?.navigationItem.titleView = navView
-        } else {
-            navController.viewControllers.first?.navigationItem.title = title
-        }
+        navController.viewControllers.first?.navigationItem.title = title
 
         return navController
     }
