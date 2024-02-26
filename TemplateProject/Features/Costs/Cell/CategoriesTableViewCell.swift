@@ -24,7 +24,7 @@ class CategoriesTableViewCell: UITableViewCell {
 
     // MARK: Internal
 
-    func setupCell(cellModel: CategoryCellModel) {
+    func setupCell(cellModel: CategoriesTableViewCellModel) {
         labelName.text = cellModel.name
     }
 

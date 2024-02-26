@@ -138,7 +138,7 @@ extension CostsController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellCategory") as? CategoriesTableViewCell else { return UITableViewCell() }
 
-        let cellModel = CategoryCellModel(name: categories[indexPath.row].name)
+        let cellModel = CategoriesTableViewCellModel(name: categories[indexPath.row].name)
         cell.setupCell(cellModel: cellModel)
 
         return cell
@@ -212,6 +212,7 @@ extension CostsController {
 
         tableView.reloadData()
         bottomView.removeFromSuperview()
+        removeKeyboardNotifications()
     }
 
     @objc

@@ -186,6 +186,7 @@ extension IncomesController {
         incomes = financeService.getIncomes()
         tableView.reloadData()
         bottomView.removeFromSuperview()
+        removeKeyboardNotifications()
     }
 
     @objc

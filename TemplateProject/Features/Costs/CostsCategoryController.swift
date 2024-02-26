@@ -263,6 +263,7 @@ extension CostsCategoryController {
         costs = finService.getCostsOfCategory(category: selectedCategory)
         tableView.reloadData()
         bottomView.removeFromSuperview()
+        removeKeyboardNotifications()
     }
 
     @objc
