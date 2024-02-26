@@ -88,6 +88,13 @@ class CostsCategoryController: UIViewController {
             constheight
         ])
     }
+
+    @objc
+    private func buttonGraphicTouchUp() {
+        let costGraphic = CostChart()
+        costGraphic.selectedCategory = selectedCategory
+        navigationController?.pushViewController(costGraphic, animated: true)
+    }
 }
 
 // MARK: UITableViewDataSource
@@ -119,6 +126,7 @@ extension CostsCategoryController {
     private func prepareUI() {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Графік платіжок", for: .normal)
+        button.addTarget(self, action: #selector(buttonGraphicTouchUp), for: .touchUpInside)
         button.layer.cornerRadius = 15
         button.backgroundColor = .blue
         view.addSubview(button)

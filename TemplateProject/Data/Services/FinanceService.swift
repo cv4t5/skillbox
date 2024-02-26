@@ -106,4 +106,48 @@ class FinanceService {
 
         return categoryCosts
     }
+
+    func getFiltredCosts(category: Category) -> List<Costs> {
+        let filtredCosts = getCostsOfCategory(category: category)
+
+        let tempAllDatesDays = filtredCosts.map { $0.date.get(.day) }
+        let datesDays = Array(Set(tempAllDatesDays))
+        var resultFiltred = List<Costs>()
+
+        for date in datesDays {
+            let tempCost = filtredCosts.filter { $0.date.get(.day) == date }
+            if !tempCost.isEmpty {
+                let sumCostAmountDay: Float = tempCost.reduce(0) { $0 + $1.amount }
+                let cost = Costs()
+                cost.date = tempCost[0].date
+                cost.amount = sumCostAmountDay
+                resultFiltred.append(cost)
+            }
+        }
+
+        return resultFiltred
+    }
+}
+
+// MARK: Helpers
+
+extension Array where Element: Equatable {
+    var unique: [Element] {
+        var uniqueValues: [Element] = []
+        forEach { item in
+            guard !uniqueValues.contains(item) else { return }
+            uniqueValues.append(item)
+        }
+        return uniqueValues
+    }
+}
+
+extension Date {
+    func get(_ components: Calendar.Component..., calendar: Calendar = Calendar.current) -> DateComponents {
+        calendar.dateComponents(Set(components), from: self)
+    }
+
+    func get(_ component: Calendar.Component, calendar: Calendar = Calendar.current) -> Int {
+        calendar.component(component, from: self)
+    }
 }

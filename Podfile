@@ -7,5 +7,6 @@ target 'TemplateProject' do
 
   # Pods for TemplateProject
 pod 'RealmSwift'
+pod 'Charts'
 
 end

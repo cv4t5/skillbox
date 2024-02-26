@@ -13,6 +13,7 @@
 		F018A2DA2B8BE4A0004EDEF4 /* CostsCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F018A2D92B8BE4A0004EDEF4 /* CostsCategoryController.swift */; };
 		F018A2DC2B8BEC1A004EDEF4 /* CategoryAndCostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F018A2DB2B8BEC1A004EDEF4 /* CategoryAndCostsTableViewCell.swift */; };
 		F018A2DE2B8BEC32004EDEF4 /* CategoryAndCostsTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F018A2DD2B8BEC32004EDEF4 /* CategoryAndCostsTableViewCellModel.swift */; };
+		F018A2E02B8C2E2B004EDEF4 /* CostChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F018A2DF2B8C2E2B004EDEF4 /* CostChart.swift */; };
 		F040D4982B87D45400BE5786 /* TextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4972B87D45400BE5786 /* TextFieldWithLabel.swift */; };
 		F040D49D2B883A9D00BE5786 /* IncomesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D49C2B883A9D00BE5786 /* IncomesController.swift */; };
 		F040D4A42B883BE300BE5786 /* CostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040D4A32B883BE300BE5786 /* CostsController.swift */; };
@@ -42,6 +43,7 @@
 		F018A2D92B8BE4A0004EDEF4 /* CostsCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostsCategoryController.swift; sourceTree = "<group>"; };
 		F018A2DB2B8BEC1A004EDEF4 /* CategoryAndCostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAndCostsTableViewCell.swift; sourceTree = "<group>"; };
 		F018A2DD2B8BEC32004EDEF4 /* CategoryAndCostsTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAndCostsTableViewCellModel.swift; sourceTree = "<group>"; };
+		F018A2DF2B8C2E2B004EDEF4 /* CostChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostChart.swift; sourceTree = "<group>"; };
 		F040D4972B87D45400BE5786 /* TextFieldWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithLabel.swift; sourceTree = "<group>"; };
 		F040D49C2B883A9D00BE5786 /* IncomesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomesController.swift; sourceTree = "<group>"; };
 		F040D4A32B883BE300BE5786 /* CostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostsController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				F040D4B22B89415A00BE5786 /* Cell */,
 				F040D4A32B883BE300BE5786 /* CostsController.swift */,
 				F018A2D92B8BE4A0004EDEF4 /* CostsCategoryController.swift */,
+				F018A2DF2B8C2E2B004EDEF4 /* CostChart.swift */,
 			);
 			path = Costs;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				F040D49D2B883A9D00BE5786 /* IncomesController.swift in Sources */,
 				F040D4A92B884B8500BE5786 /* NavigationIncomes.swift in Sources */,
 				F079D2402B83EEC5004F8187 /* Income.swift in Sources */,
+				F018A2E02B8C2E2B004EDEF4 /* CostChart.swift in Sources */,
 				F079D23E2B83EEB6004F8187 /* Costs.swift in Sources */,
 				F079D24F2B84C0F6004F8187 /* RealmService.swift in Sources */,
 				F040D4B12B89113600BE5786 /* FinanceService.swift in Sources */,
