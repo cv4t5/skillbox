@@ -1586,7 +1586,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "72DD16EB-46CC-4B45-980C-718424B96B2C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TemplateProject/Features/Costs/CostChart.swift"
@@ -1628,6 +1628,226 @@
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "541DA687-CC1B-4ED5-9656-88E0A151B557"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Data/Services/FinanceService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "getFiltredCosts(category:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "541DA687-CC1B-4ED5-9656-88E0A151B557 - a5e8d3828da38556"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.FinanceService.getFiltredCosts(category: TemplateProject.Category) -&gt; RealmSwift.List&lt;TemplateProject.Costs&gt;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Data/Services/FinanceService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "541DA687-CC1B-4ED5-9656-88E0A151B557 - f002f4df16e83675"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TemplateProject.Costs) -&gt; Swift.Int in TemplateProject.FinanceService.getFiltredCosts(category: TemplateProject.Category) -&gt; RealmSwift.List&lt;TemplateProject.Costs&gt;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Data/Services/FinanceService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "541DA687-CC1B-4ED5-9656-88E0A151B557 - a5e8d3828da38556"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.FinanceService.getFiltredCosts(category: TemplateProject.Category) -&gt; RealmSwift.List&lt;TemplateProject.Costs&gt;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Data/Services/FinanceService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "541DA687-CC1B-4ED5-9656-88E0A151B557 - a5e8d3828da38556"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.FinanceService.getFiltredCosts(category: TemplateProject.Category) -&gt; RealmSwift.List&lt;TemplateProject.Costs&gt;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Data/Services/FinanceService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  uuid = "541DA687-CC1B-4ED5-9656-88E0A151B557 - a5e8d3828da38556"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.FinanceService.getFiltredCosts(category: TemplateProject.Category) -&gt; RealmSwift.List&lt;TemplateProject.Costs&gt;"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Data/Services/FinanceService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEDEAECF-0297-4903-91E9-A90487A55BAA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Costs/CostChart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FEDEAECF-0297-4903-91E9-A90487A55BAA - bc3d8bd2a0a8dd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CostChart.viewDidLoad() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Costs/CostChart.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "2392">
+               </Location>
+               <Location
+                  uuid = "FEDEAECF-0297-4903-91E9-A90487A55BAA - bc3d8bd2a0a8df3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CostChart.viewDidLoad() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Costs/CostChart.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "2204">
+               </Location>
+               <Location
+                  uuid = "FEDEAECF-0297-4903-91E9-A90487A55BAA - bc3d8bd2a0a8df3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CostChart.viewDidLoad() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Costs/CostChart.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "2232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2FE12E4-D8DD-431E-8605-009FCCA4B7BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Costs/CostChart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2FE12E4-D8DD-431E-8605-009FCCA4B7BA - bc3d8bd2a0a8abe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CostChart.viewDidLoad() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Costs/CostChart.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "B2FE12E4-D8DD-431E-8605-009FCCA4B7BA - bc3d8bd2a0a8abe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemplateProject.CostChart.viewDidLoad() -&gt; ()"
+                  moduleName = "TemplateProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cv4t5/Documents/Projects/FinanceManager/TemplateProject/Features/Costs/CostChart.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A94B3D9-1E57-4C11-8DD4-FB19AC759387"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TemplateProject/Features/Costs/CostChart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

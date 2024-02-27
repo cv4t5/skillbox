@@ -27,7 +27,7 @@ class CostChart: UIViewController {
         var entries: [ChartDataEntry] = []
 
         for i in 0 ..< dateObjects.count {
-            let entry = ChartDataEntry(x: Double(i), y: Double(costs[i].amount))
+            let entry = ChartDataEntry(x: Double(i * 2), y: Double(costs[i].amount))
             entries.append(entry)
         }
 
@@ -35,7 +35,8 @@ class CostChart: UIViewController {
         dataSet.colors = [NSUIColor.blue]
 
         let data = LineChartData(dataSet: dataSet)
-        lineChartsView.xAxis.valueFormatter = IndexAxisValueFormatter(values: dateObjects.map { axisDateFormatter.string(from: $0.date) })
+        lineChartsView.xAxis.valueFormatter = IndexAxisValueFormatter(values: dateObjects.compactMap { axisDateFormatter.string(from: $0.date) })
+        lineChartsView.xAxis.labelPosition = .bottom
         lineChartsView.data = data
 
         lineChartsView.translatesAutoresizingMaskIntoConstraints = false

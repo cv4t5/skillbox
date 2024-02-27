@@ -111,17 +111,20 @@ class FinanceService {
         let filtredCosts = getCostsOfCategory(category: category)
 
         let tempAllDatesDays = filtredCosts.map { $0.date.get(.day) }
-        let datesDays = Array(Set(tempAllDatesDays))
+        var datesDays = Array(Set(tempAllDatesDays))
+        datesDays.sort(by: <)
         var resultFiltred = List<Costs>()
 
         for date in datesDays {
             let tempCost = filtredCosts.filter { $0.date.get(.day) == date }
             if !tempCost.isEmpty {
-                let sumCostAmountDay: Float = tempCost.reduce(0) { $0 + $1.amount }
-                let cost = Costs()
-                cost.date = tempCost[0].date
-                cost.amount = sumCostAmountDay
-                resultFiltred.append(cost)
+                let tempcost = Costs()
+                let sumCostAmountDay: Float = tempCost.reduce(0) { sum, cost in
+                    tempcost.date = cost.date
+                    return sum + cost.amount }
+
+                tempcost.amount = sumCostAmountDay
+                resultFiltred.append(tempcost)
             }
         }
 
